@@ -1,8 +1,9 @@
 # fastimage
 
-[![GoDoc](https://godoc.org/github.com/rubenfonseca/fastimage?status.png)](https://godoc.org/github.com/rubenfonseca/fastimage) [![Build Status](https://travis-ci.org/rubenfonseca/fastimage.svg?branch=master)](http://travis-ci.org/rubenfonseca/fastimage) [![wercker status](https://app.wercker.com/status/99926bf6ba7846259d5f65de5c5b4ed1/m "wercker status")](https://app.wercker.com/project/bykey/99926bf6ba7846259d5f65de5c5b4ed1)
+[![GoDoc](https://godoc.org/github.com/delthas/fastimage?status.png)](https://godoc.org/github.com/delthas/fastimage)
 
-by Ruben Fonseca (@[rubenfonseca](http://twitter.com/rubenfonseca))
+forked by delthas
+off an [original repo](github.com/rubenfonseca/fastimage) by Ruben Fonseca (@[rubenfonseca](http://twitter.com/rubenfonseca))
 
 Golang implementation of [fastimage](https://pypi.python.org/pypi/fastimage/0.2.1).
 Finds the type and/or size of an image given its uri by fetching as little as needed.
@@ -14,7 +15,7 @@ the size and type of the image, it stops the download.
 
 ## Install
 
-    $ go get github.com/rubenfonseca/fastimage
+    $ go get github.com/delthas/fastimage
 
 ## Usage
 
@@ -69,4 +70,4 @@ If you want to set request timeout for url:
 
 fastimage is under MIT license. See the [LICENSE][license] file for details.
 
-[license]: https://github.com/rubenfonseca/fastimage/blob/master/LICENSE
+[license]: https://github.com/delthas/fastimage/blob/master/LICENSE

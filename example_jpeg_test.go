@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/rubenfonseca/fastimage"
+	"github.com/delthas/fastimage"
 )
 
 // This example shows basic usage of the package: just pass an url to the
