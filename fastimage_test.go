@@ -124,12 +124,60 @@ func TestTIFFImage(t *testing.T) {
 
 }
 
+func TestWEBPLosslessImage(t *testing.T) {
+	t.Parallel()
+
+	url := "https://www.gstatic.com/webp/gallery3/1_webp_ll.webp"
+
+	imagetype, size, err := DetectImageType(url)
+	if err != nil {
+		t.Error("Failed to detect image type")
+	}
+
+	if imagetype != WEBP {
+		t.Error("Image is not WEBP")
+	}
+
+	if size.Width != 400 {
+		t.Error("Image width is wrong")
+	}
+
+	if size.Height != 301 {
+		t.Error("Image height is wrong")
+	}
+
+}
+
+func TestWEBPLossyImage(t *testing.T) {
+	t.Parallel()
+
+	url := "https://www.gstatic.com/webp/gallery3/1_webp_a.webp"
+
+	imagetype, size, err := DetectImageType(url)
+	if err != nil {
+		t.Error("Failed to detect image type")
+	}
+
+	if imagetype != WEBP {
+		t.Error("Image is not WEBP")
+	}
+
+	if size.Width != 400 {
+		t.Error("Image width is wrong")
+	}
+
+	if size.Height != 301 {
+		t.Error("Image height is wrong")
+	}
+
+}
+
 func TestCustomTimeout(t *testing.T) {
 	t.Parallel()
 
 	url := "http://loremflickr.com/500/500"
 
-	imagetype, size, err := DetectImageTypeWithTimeout(url, 1000)
+	imagetype, size, err := DetectImageTypeWithTimeout(url, 1)
 	t.Logf("imageType: %v", imagetype)
 	t.Logf("size: %v", size)
 	t.Logf("error: %v", err)

@@ -15,6 +15,8 @@ const (
 	BMP
 	// TIFF represents a TIFF image
 	TIFF
+	// WEBP represents a WEBP image
+	WEBP
 	// Unknown represents an unknown image type
 	Unknown
 )
